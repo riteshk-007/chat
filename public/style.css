@@ -92,17 +92,3 @@
 .input-area input:focus {
   box-shadow: 0 0 10px #64b5f6;
 }
-
-.input-area button {
-  padding: 5px 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: #64b5f6;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.input-area button:hover {
-  background-color: #d4e157;
-}
