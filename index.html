@@ -4,10 +4,146 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chat</title>
-    <link rel="stylesheet" href="public/style.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .conatiner {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .chat-container {
+        border: 1px solid #ccc;
+        width: 800px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: beige;
+      }
+      .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        background-color: #f5f5f5;
+      }
+
+      .logo h1 {
+        font-size: 1.5em;
+        color: #333;
+      }
+      .chat-area {
+        padding: 10px;
+        overflow-y: auto;
+        height: 500px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f5f5f5;
+        display: flex;
+        flex-direction: column;
+        scrollbar-width: thin;
+        scrollbar-color: #888 #f5f5f5;
+      }
+
+      .message {
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        max-width: 80%;
+        word-wrap: break-word;
+      }
+
+      .incoming {
+        background-color: #d4e157;
+        align-self: flex-start;
+      }
+
+      .outgoing {
+        background-color: #64b5f6;
+        align-self: flex-end;
+      }
+
+      .user-name {
+        font-size: 0.8em;
+        font-weight: bold;
+        color: #666;
+      }
+
+      .user-message {
+        color: #333;
+        margin-top: 5px;
+        font-size: 0.9em;
+      }
+      .input-area {
+        display: flex;
+        padding: 10px;
+        background-color: #f5f5f5;
+      }
+
+      .input-area input {
+        flex-grow: 1;
+        margin-right: 10px;
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        transition: box-shadow 0.3s ease;
+      }
+
+      .input-area input:focus {
+        box-shadow: 0 0 10px #64b5f6;
+      }
+
+      .input-area button {
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #64b5f6;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .input-area button:hover {
+        background-color: #d4e157;
+      }
+    </style>
   </head>
   <body>
-    <h1>hello</h1>
+    <div class="conatiner">
+      <div class="chat-container">
+        <div class="logo">
+          <h1>LOGO</h1>
+        </div>
+        <div class="chat-area">
+          <div class="message incoming">
+            <div class="user-name">Ritesh</div>
+            <div class="user-message">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam,
+              iste.
+            </div>
+          </div>
+          <div class="message outgoing">
+            <div class="user-name">Ritesh</div>
+            <div class="user-message">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam,
+              iste.
+            </div>
+          </div>
+        </div>
+
+        <div class="input-area">
+          <input type="text" placeholder="Type a message..." />
+          <button>Send</button>
+        </div>
+      </div>
+    </div>
     <script src="public/client.js"></script>
   </body>
 </html>
