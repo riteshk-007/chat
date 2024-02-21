@@ -14,6 +14,8 @@ http.createServer(app).listen(PORT, () => {
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+app.use(express.static(__dirname + "/public"));
+
 app.get("/", (req, res) => {
   res.sendFile(`${__dirname}/index.html`);
 });
